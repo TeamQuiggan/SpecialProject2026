@@ -3,11 +3,17 @@ using UnityEngine;
 public class Pacman : MonoBehaviour
 {   
     public Movement movement {  get; private set; }
+    public SpriteRenderer spriteRenderer { get; private set; }
+    public Sprite up;
+    public Sprite down;
+    public AnimateSprite anim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         movement = GetComponent<Movement>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<AnimateSprite>();
     }
 
     // Update is called once per frame
@@ -15,23 +21,40 @@ public class Pacman : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
+            anim.Cancel();
+            anim.enabled = false;
             this.movement.SetDirection(Vector2.up);
-
+            spriteRenderer.sprite = up;
+            
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
+            anim.Cancel();
+            anim.enabled = false;
             this.movement.SetDirection(Vector2.down);
-
+            spriteRenderer.sprite = down;
+            
         }
         else if (Input.GetKeyDown(KeyCode.D))
-        {
+        {   
+            anim.enabled = true;
+            anim.Restart();
             this.movement.SetDirection(Vector2.right);
+            this.spriteRenderer.flipX = true;
         }
         else if (Input.GetKeyDown (KeyCode.A))
         {
+            anim.enabled = true;
+            anim.Restart();
             this.movement.SetDirection(Vector2.left);
+            this.spriteRenderer.flipX = false;
         }
-        float angle = Mathf.Atan2(this.movement.Dir.y, this.movement.Dir.x);
-        this.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+        //float angle = Mathf.Atan2(this.movement.Dir.y, this.movement.Dir.x);
+        //this.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
+    }
+    public void ResetState()
+    {
+        this.gameObject.SetActive(true);
+        this.movement.ResetState();
     }
 }

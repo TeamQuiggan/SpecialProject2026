@@ -16,14 +16,14 @@ public class AnimateSprite : MonoBehaviour
     }
     void Start()
     {
-        InvokeRepeating(nameof(Advance), this.AnimationTime, this.AnimationTime);
+        Restart();
     }
     // Update is called once per frame
     void Update()
     {
     
     }
-    private void Advance()
+    public void Advance()
     {   
         if (!this.spriteRenderer.enabled)
         {
@@ -43,6 +43,14 @@ public class AnimateSprite : MonoBehaviour
     {
         this.AnimationFrame = -1;
         Advance();
+    }
+    public void Cancel()
+    {
+        CancelInvoke(nameof(Advance));
+    }
+    public void Restart()
+    {
+        InvokeRepeating(nameof(Advance), this.AnimationTime, this.AnimationTime);
     }
     
 }

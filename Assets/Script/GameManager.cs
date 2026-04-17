@@ -52,9 +52,9 @@ public class GameManager : MonoBehaviour
         movement.ResetState();
         for (int i = 0; i < this.GhostS.Length; i++)
         {
-            this.GhostS[i].gameObject.SetActive(true);
+            this.GhostS[i].ResetSttate();
         }
-        this.PacMan.gameObject.SetActive(true);
+        this.PacMan.ResetState();
         
     }
     private void SetScore(int score)

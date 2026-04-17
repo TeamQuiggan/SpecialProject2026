@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2363049606736331665}
   - component: {fileID: 3216319920832895650}
+  - component: {fileID: -1174130448702187602}
   m_Layer: 10
   m_Name: Node
   m_TagString: Untagged
@@ -78,3 +79,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &-1174130448702187602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5422739431859096751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7966667f8e0386240843933e17a5b022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 512
