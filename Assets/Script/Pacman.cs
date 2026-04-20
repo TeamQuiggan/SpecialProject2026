@@ -10,7 +10,7 @@ public class Pacman : MonoBehaviour
     public Sprite down;
     public AnimateSprite anim;
     public bool Teleportable = true;
-
+    public AudioSource audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -28,6 +28,7 @@ public class Pacman : MonoBehaviour
             anim.enabled = false;
             this.movement.SetDirection(Vector2.up);
             spriteRenderer.sprite = up;
+            audio.Play();
             
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -36,7 +37,7 @@ public class Pacman : MonoBehaviour
             anim.enabled = false;
             this.movement.SetDirection(Vector2.down);
             spriteRenderer.sprite = down;
-            
+            audio.Play();
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {   
@@ -44,6 +45,7 @@ public class Pacman : MonoBehaviour
             anim.Restart();
             this.movement.SetDirection(Vector2.right);
             this.spriteRenderer.flipX = true;
+            audio.Play();
         }
         else if (Input.GetKeyDown (KeyCode.A))
         {
@@ -51,6 +53,7 @@ public class Pacman : MonoBehaviour
             anim.Restart();
             this.movement.SetDirection(Vector2.left);
             this.spriteRenderer.flipX = false;
+            audio.Play();
         }
         //float angle = Mathf.Atan2(this.movement.Dir.y, this.movement.Dir.x);
         //this.transform.rotation = Quaternion.AngleAxis(angle * Mathf.Rad2Deg, Vector3.forward);
