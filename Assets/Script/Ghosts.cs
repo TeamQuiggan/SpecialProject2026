@@ -3,6 +3,7 @@ using UnityEngine;
 public class Ghosts : MonoBehaviour
 {
     public int points = 200;
+    
     public Movement movement {  get; private set; }
     public Ghost_Chase chase { get; private set; }
     public Ghost_Frighten frighten { get; private set; }

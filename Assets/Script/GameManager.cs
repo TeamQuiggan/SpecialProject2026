@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class GameManager : MonoBehaviour
     public int lives { get; private set; }
     public int ghostMulti { get; private set; } = 1;
     public Movement movement;
-    
+    public AudioSource audioSource;
+    public List<AudioClip> audio;
+
     void Start()
     {
         NewGame(); 
@@ -87,6 +90,7 @@ public class GameManager : MonoBehaviour
     public void PelletEaten(Pellet pell)
     {
         pell.gameObject.SetActive(false);
+        audioSource.Play();
         SetScore(this.score + pell.points);
         if (!HasRemainingPellets())
         {
@@ -94,9 +98,14 @@ public class GameManager : MonoBehaviour
 
             Invoke(nameof(NewRound), 3f);
         }
+
     }
     public void PowerPelletEaten(PowerPellet pell)
-    {
+    {   
+        for (int i = 0; i<GhostS.Length;i++)
+        {
+            this.GhostS[i].frighten.Enable(pell.dura);
+        }
         PelletEaten(pell);
         CancelInvoke(nameof(ResetGhostMulti));
         Invoke(nameof(ResetGhostMulti), pell.dura);
