@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+
 
 public class Pacman : MonoBehaviour
 {   
@@ -7,12 +9,8 @@ public class Pacman : MonoBehaviour
     public Sprite up;
     public Sprite down;
     public AnimateSprite anim;
-<<<<<<< Updated upstream
-
-=======
     public bool Teleportable = true;
     public AudioSource audio;
->>>>>>> Stashed changes
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -64,5 +62,19 @@ public class Pacman : MonoBehaviour
     {
         this.gameObject.SetActive(true);
         this.movement.ResetState();
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Portal")
+        {
+            StartCoroutine(TeleportationCoolDown());
+        }
+    }
+    public IEnumerator TeleportationCoolDown()
+    {
+        Teleportable = false;
+        yield return new WaitForSecondsRealtime(0.2f);
+        Teleportable = true;
+
     }
 }
