@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: efea40916f68ec5489868840558d205c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3440740416010904960
+    second: title Lights (PC)_0
+  - first:
+      213: 670840490891997796
+    second: title Lights (PC)_1
+  - first:
+      213: 3080201320217877031
+    second: title Lights (PC)_2
+  - first:
+      213: 3022091538203658981
+    second: title Lights (PC)_3
+  - first:
+      213: 5361424619807421642
+    second: title Lights (PC)_4
+  - first:
+      213: 1242598159306261990
+    second: title Lights (PC)_5
+  - first:
+      213: 674113340578659474
+    second: title Lights (PC)_6
+  - first:
+      213: 1700719132516149987
+    second: title Lights (PC)_7
+  - first:
+      213: 7989526981077299686
+    second: title Lights (PC)_8
+  - first:
+      213: 3463363458273519368
+    second: title Lights (PC)_9
+  - first:
+      213: 3270345987723161932
+    second: title Lights (PC)_10
+  - first:
+      213: -2780160054565773929
+    second: title Lights (PC)_11
+  - first:
+      213: 3041310998785975358
+    second: title Lights (PC)_12
+  - first:
+      213: -1018832846566934250
+    second: title Lights (PC)_13
+  - first:
+      213: -3101914291181295580
+    second: title Lights (PC)_14
+  - first:
+      213: -851231980479693250
+    second: title Lights (PC)_15
+  - first:
+      213: 1717814092591798717
+    second: title Lights (PC)_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: title Lights (PC)_0
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 117
+        width: 51
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085e8a4bd27ffbf20800000000000000
+      internalID: 3440740416010904960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 124
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462f0984fdd4f4900800000000000000
+      internalID: 670840490891997796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_2
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 110
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a9648f7c21fba20800000000000000
+      internalID: 3080201320217877031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 111
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eac7550e30a0f920800000000000000
+      internalID: 3022091538203658981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 17
+        width: 44
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4b7a1294b976a40800000000000000
+      internalID: 5361424619807421642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 59
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5010c31789e3110800000000000000
+      internalID: 1242598159306261990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 69
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29cfa8bf28eea5900800000000000000
+      internalID: 674113340578659474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_7
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 19
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eae55c4a0b2a9710800000000000000
+      internalID: 1700719132516149987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 55
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1f28e757080ee60800000000000000
+      internalID: 7989526981077299686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 48
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807267237b6501030800000000000000
+      internalID: 3463363458273519368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 26
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41fcda495a926d20800000000000000
+      internalID: 3270345987723161932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 37
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d50e80923ea69d0800000000000000
+      internalID: -2780160054565773929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_12
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 22
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3460266d38e43a20800000000000000
+      internalID: 3041310998785975358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619b0ee8ce06cd1f0800000000000000
+      internalID: -1018832846566934250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_14
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 17
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4286e660369c3f4d0800000000000000
+      internalID: -3101914291181295580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_15
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 14
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3e3e061601df24f0800000000000000
+      internalID: -851231980479693250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: title Lights (PC)_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 22
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9181bd0d6e6d710800000000000000
+      internalID: 1717814092591798717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      title Lights (PC)_0: 3440740416010904960
+      title Lights (PC)_1: 670840490891997796
+      title Lights (PC)_10: 3270345987723161932
+      title Lights (PC)_11: -2780160054565773929
+      title Lights (PC)_12: 3041310998785975358
+      title Lights (PC)_13: -1018832846566934250
+      title Lights (PC)_14: -3101914291181295580
+      title Lights (PC)_15: -851231980479693250
+      title Lights (PC)_16: 1717814092591798717
+      title Lights (PC)_2: 3080201320217877031
+      title Lights (PC)_3: 3022091538203658981
+      title Lights (PC)_4: 5361424619807421642
+      title Lights (PC)_5: 1242598159306261990
+      title Lights (PC)_6: 674113340578659474
+      title Lights (PC)_7: 1700719132516149987
+      title Lights (PC)_8: 7989526981077299686
+      title Lights (PC)_9: 3463363458273519368
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
