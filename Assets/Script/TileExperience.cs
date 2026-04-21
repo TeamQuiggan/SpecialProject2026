@@ -13,7 +13,7 @@ public class TileExperience : MonoBehaviour
     public Passage Portal1;
     public Passage Portal2;
     public GameObject boulder;
-    public bool SpawnBoulder;
+    bool SpawnBoulder = true;
     void Start()
     {
         // 1. Get the rectangular bounds of all painted tiles
@@ -39,11 +39,11 @@ public class TileExperience : MonoBehaviour
             SpawnPortal = false;
             StartCoroutine(spawnPortal());
         }
-        //if (SpawnBoulder)
-        //{
-        //    SpawnBoulder = false;
-        //    StartCoroutine(Spawnboulder());
-        //}
+        if (SpawnBoulder)
+        {
+            SpawnBoulder = false;
+            StartCoroutine(Spawnboulder());
+        }
     }
     IEnumerator spawnPortal()
     {
@@ -109,6 +109,7 @@ public class TileExperience : MonoBehaviour
         Random1 = Random.Range(0, portalnode.Count);
         Instantiate(boulder, portalnode[Random1], Quaternion.identity);
         yield return new WaitForSecondsRealtime(7f);
+        SpawnBoulder = true;
 
     }
 }

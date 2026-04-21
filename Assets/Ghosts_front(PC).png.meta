@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7d7e6a264d5cb554b88694279ea5beb0
+guid: ac66694effda0584aab9b5aeee860c59
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2690792559708188323
-    second: front_0
+      213: 6922798101765478873
+    second: Ghosts_front(PC)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: front_0
+      name: Ghosts_front(PC)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 544
-        height: 560
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5154526c6268aad0800000000000000
-      internalID: -2690792559708188323
+      spriteID: 9d9da7be138b21060800000000000000
+      internalID: 6922798101765478873
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      front_0: -2690792559708188323
+      Ghosts_front(PC)_0: 6922798101765478873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
