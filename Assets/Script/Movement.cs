@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     public LayerMask obstacleLayer;
     public Vector2 Dir {  get; private set; }
     public Vector2 NextDir { get; private set; }
-    public Vector3 StartingPos { get; private set; }
+    public Vector3 StartingPos;
     public Rigidbody2D body { get; private set; }
     private Vector2 targetPosition;
     private bool isMoving = false;
