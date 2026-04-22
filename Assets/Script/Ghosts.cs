@@ -13,16 +13,18 @@ public class Ghosts : MonoBehaviour
     public Transform target;
     private void Awake()
     {
-        this.movement = GetComponent<Movement>();
-        this.chase = GetComponent<Ghost_Chase>();
-        this.frighten = GetComponent<Ghost_Frighten>();
-        this.home = GetComponent<Ghost_Home>();
-        this.scatter = GetComponent<Ghost_Scatter>();
+
+            this.movement = GetComponent<Movement>();
+            this.chase = GetComponent<Ghost_Chase>();
+            this.frighten = GetComponent<Ghost_Frighten>();
+            this.home = GetComponent<Ghost_Home>();
+            this.scatter = GetComponent<Ghost_Scatter>();
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {
-        ResetSttate();
+    {   
+            ResetSttate();
     }
 
     // Update is called once per frame

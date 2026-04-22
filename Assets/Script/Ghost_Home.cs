@@ -9,7 +9,9 @@ public class Ghost_Home : Ghost_Behave
     {
         if (gameObject.activeInHierarchy)
         {
-            StartCoroutine(ExitTransition());
+
+                StartCoroutine(ExitTransition());
+
         }
     }
     private void OnEnable()
@@ -23,7 +25,8 @@ public class Ghost_Home : Ghost_Behave
         
     }
     private IEnumerator ExitTransition()
-    {
+    {   
+
         this.ghost.movement.SetDirection(Vector2.up, true);
         this.ghost.movement.body.isKinematic = true;
         this.ghost.movement.enabled = false;

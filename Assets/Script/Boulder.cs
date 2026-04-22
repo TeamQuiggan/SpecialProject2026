@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 public class Boulder : MonoBehaviour
 {
     public LayerMask obstacleLayer;
@@ -9,6 +10,7 @@ public class Boulder : MonoBehaviour
     AnimateSprite anim;
     public Sprite[] sprites;
     Sprite[] Instancesprites;
+    int index;
     public List<Vector2> AvailableDir { get; private set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,8 +30,9 @@ public class Boulder : MonoBehaviour
         CheckAvailableDir1(Vector2.down);
         CheckAvailableDir1(Vector2.left);
         CheckAvailableDir1(Vector2.right);
-        int index = Random.Range(0, AvailableDir.Count);
-        this.movement.SetDirection(AvailableDir[index]);
+        index = Random.Range(0, 2);
+
+
         //if (Boulderghost.scatter.Counter == 0)
         //{
         //    Boulderghost.scatter.Counter = 1;
@@ -38,9 +41,9 @@ public class Boulder : MonoBehaviour
     }
     // Update is called once per frame
     void FixedUpdate()
-    {   
+    {
+        StartCoroutine(spareCheck());
 
-        CheckAvailableDir(this.movement.Dir);
     }
     //void OnCollisionEnter2D(Collision2D col)
     //{
@@ -50,14 +53,14 @@ public class Boulder : MonoBehaviour
     //    }
     //}
     private void CheckAvailableDir(Vector2 dir)
-    {
+    {   
         RaycastHit2D hit = Physics2D.BoxCast(this.transform.position, Vector2.one * 0.5f, 0.0f, dir, 1f, this.obstacleLayer);
         if (hit.collider != null)
         {
             gameManager.GhostS.Remove(Boulderghost);
             Instancesprites = (Sprite[])this.sprites.Clone();
             anim.sprites = Instancesprites;
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 1f);
 
         }
     }
@@ -73,4 +76,10 @@ public class Boulder : MonoBehaviour
     //{
     //    yield return new WaitForSecondsRealtime();
     //}
+    IEnumerator spareCheck()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        CheckAvailableDir(this.movement.Dir);
+        this.movement.SetDirection(AvailableDir[index]);
+    }
 }

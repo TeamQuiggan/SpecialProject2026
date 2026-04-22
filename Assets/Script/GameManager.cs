@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] Level1Stuff;
     public GameObject[] Level2Stuff;
     public GameObject DarkenBackgr;
+    public bool Transitioning = false;
+    public Transform PelletLevel2;
+    public SceneTransition transition;
+    public GameObject HighScoreBoard;
+    public Text First, Second, Third, Fourth, Fifth, Sixth;
+    private List<float> Records = new List<float>(6);
     void Start()
     {
         Level1 = true;
@@ -36,20 +43,36 @@ public class GameManager : MonoBehaviour
         {
             NewGame();
         }
-        if (Input.GetKeyDown(KeyCode.Return) && Level1)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && Level1)
         {
+            Level1 = false;
             Level1to2();
             this.PacMan.gameObject.SetActive(false);
-            this.PacMan.gameObject.transform.position = new Vector3(0.5f, -7.5f, -5f);
+            this.movement.StartingPos = new Vector3(0.5f, -6.5f, -5f);
+            StartCoroutine(transition.Transitioning());
             Invoke(nameof(NewRound), 3f);
+            Level2 = true;
         }
-        if (Input.GetKeyDown(KeyCode.Return) && Level2)
-        {
+        else if (Keyboard.current.spaceKey.wasPressedThisFrame && Level2)
+        {   
+            Level2 = false;
             Level2to1();
             this.PacMan.gameObject.SetActive(false);
-            this.PacMan.gameObject.transform.position = new Vector3(0.5f, -6.5f, -5f);
+            this.movement.StartingPos = new Vector3(0.5f, -7.5f, -5f);
+            StartCoroutine(transition.Transitioning());
             Invoke(nameof(NewRound), 3f);
+            Level1 = true;
         }
+        //if (Level1)
+        //{
+        //    Level1 = false;
+        //    Level2 = true;
+        //}
+        //else if (Level2)
+        //{
+        //    Level2 = false;
+        //    Level1 = true;
+        //}
     }
     private void NewGame()
     {
@@ -62,9 +85,20 @@ public class GameManager : MonoBehaviour
     {   
         DarkenBackgr.SetActive(false);
         gameOverText.enabled = false;
-        foreach (Transform pellet in this.Pellets)
+        HighScoreBoard.SetActive(false);
+        if (Level1)
         {
-            pellet.gameObject.SetActive(true);
+            foreach (Transform pellet in this.Pellets)
+            {
+                pellet.gameObject.SetActive(true);
+            }
+        }
+        else if (Level2)
+        {
+            foreach (Transform pellet in this.PelletLevel2)
+            {
+                pellet.gameObject.SetActive(true);
+            }
         }
         ResetState();
     }
@@ -85,23 +119,39 @@ public class GameManager : MonoBehaviour
             //this.GhostS[i].gameObject.SetActive(false);
         }
         this.PacMan.gameObject.SetActive(false);
+        HighScore();
     }
     private void ResetState()
     {   
         ResetGhostMulti();
         movement.ResetState();
-        for (int i = 0; i < this.GhostS.Count; i++)
-        {
+        //for (int i = 0; i < this.GhostS.Count; i++)
+        //{
 
-            if (this.GhostS[i].gameObject.activeSelf)
+        //    //if (this.GhostS[i].gameObject.activeSelf)
+        //    //{
+        //    //    this.GhostS[i].ResetSttate();
+        //    //}
+        //    //else
+        //    //{
+        //    //    continue;
+        //    //}
+        //    //this.GhostS[i].ResetSttate();
+
+        //}
+        if (Level1)
+        {
+            for (int i = 0; i<3; i++)
             {
                 this.GhostS[i].ResetSttate();
             }
-            else
+        }
+        else if (Level2)
+        {
+            for (int i = 3; i < GhostS.Count; i++)
             {
-                continue;
+                this.GhostS[i].ResetSttate();
             }
-            //this.GhostS[i].ResetSttate();
         }
         this.PacMan.ResetState();
         
@@ -142,14 +192,14 @@ public class GameManager : MonoBehaviour
             {
                 Level1to2();
                 this.PacMan.gameObject.SetActive(false);
-
+                this.movement.StartingPos = new Vector3(0.5f, -7.5f, -5f);
                 Invoke(nameof(NewRound), 3f);
             }
             else if (Level2)
             {
                 Level2to1();
                 this.PacMan.gameObject.SetActive(false);
-
+                this.movement.StartingPos = new Vector3(0.5f, -6.5f, -5f);
                 Invoke(nameof(NewRound), 3f);
             }
 
@@ -162,8 +212,16 @@ public class GameManager : MonoBehaviour
         {
 
             if (this.GhostS[i].gameObject.activeSelf)
-            {
-                this.GhostS[i].frighten.Enable(pell.dura);
+            {   
+                if (this.GhostS[i].gameObject.tag == "Boulder")
+                {
+                    continue;
+                }
+                else
+                {
+                    this.GhostS[i].frighten.Enable(pell.dura);
+                }
+
             }
             else
             {
@@ -176,12 +234,29 @@ public class GameManager : MonoBehaviour
         Invoke(nameof(ResetGhostMulti), pell.dura);
     }
     private bool HasRemainingPellets()
-    {
-        foreach (Transform pellet in this.Pellets)
+    {   
+
+
+        if (Level1)
         {
-            if (pellet.gameObject.activeSelf)
+            foreach (Transform pellet in this.Pellets)
             {
-                return true;
+                if (pellet.gameObject.activeSelf)
+                {
+                    return true;
+                }
+            }
+
+        }
+        else if (Level2)
+        {
+
+            foreach (Transform pellet in this.PelletLevel2)
+            {
+                if (pellet.gameObject.activeSelf)
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -197,7 +272,7 @@ public class GameManager : MonoBehaviour
     }
     private void Level1to2()
     {
-        Level1 = false;
+        //Level1 = false;
         Camera.main.orthographicSize = 15f;
         foreach (GameObject obj in Level1Stuff)
         {
@@ -208,11 +283,11 @@ public class GameManager : MonoBehaviour
         {
             obj.SetActive(true);
         }
-        Level2 = true;
+        //Level2 = true;
     }
     private void Level2to1()
     {
-        Level2 = false;
+        //Level2 = false;
         Camera.main.orthographicSize = 18f;
         foreach (GameObject obj in Level1Stuff)
         {
@@ -223,6 +298,22 @@ public class GameManager : MonoBehaviour
         {
             obj.SetActive(false);
         }
-        Level1 = true;
+        //Level1 = true;
+    }
+    public void HighScore()
+    {
+        Records.Add(this.score);
+        Records.Sort((a, b) => b.CompareTo(a)); // sort descending
+        if (Records.Count > 6) Records.RemoveAt(6); // keep top 6 only
+
+        Text[] slots = { First, Second, Third, Fourth, Fifth, Sixth };
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (i < Records.Count)
+                slots[i].text = Records[i].ToString("F2");
+            else
+                slots[i].text = "--";
+        }
+        HighScoreBoard.SetActive(true);
     }
 }
