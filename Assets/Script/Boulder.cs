@@ -30,7 +30,15 @@ public class Boulder : MonoBehaviour
         CheckAvailableDir1(Vector2.down);
         CheckAvailableDir1(Vector2.left);
         CheckAvailableDir1(Vector2.right);
-        index = Random.Range(0, 2);
+        if (this.AvailableDir.Count > 2)
+        {
+            index = Random.Range(0, 2);
+        }
+        else
+        {
+            index = 0;
+        }
+
 
 
         //if (Boulderghost.scatter.Counter == 0)
