@@ -190,17 +190,23 @@ public class GameManager : MonoBehaviour
         {   
             if (Level1)
             {
+                Level1 = false;
                 Level1to2();
                 this.PacMan.gameObject.SetActive(false);
-                this.movement.StartingPos = new Vector3(0.5f, -7.5f, -5f);
+                this.movement.StartingPos = new Vector3(0.5f, -6.5f, -5f);
+                StartCoroutine(transition.Transitioning());
                 Invoke(nameof(NewRound), 3f);
+                Level2 = true;
             }
             else if (Level2)
             {
+                Level2 = false;
                 Level2to1();
                 this.PacMan.gameObject.SetActive(false);
-                this.movement.StartingPos = new Vector3(0.5f, -6.5f, -5f);
+                this.movement.StartingPos = new Vector3(0.5f, -7.5f, -5f);
+                StartCoroutine(transition.Transitioning());
                 Invoke(nameof(NewRound), 3f);
+                Level1 = true;
             }
 
         }
