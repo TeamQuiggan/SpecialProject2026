@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     public Text First, Second, Third, Fourth, Fifth, Sixth;
     private List<float> Records = new List<float>(6);
     public Transform PelletLevel3;
-
+    public GameObject SettingPannel;
     void Start()
     {
         Level1 = true;
@@ -78,6 +78,11 @@ public class GameManager : MonoBehaviour
             Invoke(nameof(NewRound), 3f);
             Level1 = true;
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SettingPannel.SetActive(true);
+            // Add your pause or menu close logic here
+        }
         //if (Level1)
         //{
         //    Level1 = false;
@@ -100,6 +105,7 @@ public class GameManager : MonoBehaviour
     {   
         DarkenBackgr.SetActive(false);
         gameOverText.enabled = false;
+        SettingPannel.SetActive(false);
         HighScoreBoard.SetActive(false);
         if (Level1)
         {
@@ -385,5 +391,9 @@ public class GameManager : MonoBehaviour
                 slots[i].text = "--";
         }
         HighScoreBoard.SetActive(true);
+    }
+    public void closeOptions()
+    {
+       SettingPannel.SetActive(false);
     }
 }
