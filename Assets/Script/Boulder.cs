@@ -68,7 +68,7 @@ public class Boulder : MonoBehaviour
             gameManager.GhostS.Remove(Boulderghost);
             Instancesprites = (Sprite[])this.sprites.Clone();
             anim.sprites = Instancesprites;
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.75f);
 
         }
     }
