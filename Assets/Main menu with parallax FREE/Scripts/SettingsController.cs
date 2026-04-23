@@ -70,7 +70,7 @@ public class SettingsController : MonoBehaviour {
     {
         string jsonData = JsonUtility.ToJson(gameSettings,true);
         File.WriteAllText(Application.persistentDataPath + "/gamesettings.json", jsonData);
-        MenuController.instance.closeOptions();
+        //MenuController.instance.closeOptions();
     }
 
     public void loadSettings()
