@@ -1,58 +1,58 @@
 fileFormatVersion: 2
-guid: efea40916f68ec5489868840558d205c
+guid: 3f8d5edba842d5348bece44d11cbd6a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3440740416010904960
-    second: title Lights (PC)_0
+      213: 344737741411508031
+    second: Hell(PC)_0
   - first:
-      213: 670840490891997796
-    second: title Lights (PC)_1
+      213: -8803071696574084849
+    second: Hell(PC)_1
   - first:
-      213: 3080201320217877031
-    second: title Lights (PC)_2
+      213: 4968931515259943727
+    second: Hell(PC)_2
   - first:
-      213: 3022091538203658981
-    second: title Lights (PC)_3
+      213: -9048053585987936902
+    second: Hell(PC)_3
   - first:
-      213: 5361424619807421642
-    second: title Lights (PC)_4
+      213: 2063027229352418351
+    second: Hell(PC)_4
   - first:
-      213: 1242598159306261990
-    second: title Lights (PC)_5
+      213: 3800691738443825404
+    second: Hell(PC)_5
   - first:
-      213: 674113340578659474
-    second: title Lights (PC)_6
+      213: 1019282977017252370
+    second: Hell(PC)_6
   - first:
-      213: 1700719132516149987
-    second: title Lights (PC)_7
+      213: 5686050261829900093
+    second: Hell(PC)_7
   - first:
-      213: 7989526981077299686
-    second: title Lights (PC)_8
+      213: 4901494713265257006
+    second: Hell(PC)_8
   - first:
-      213: 3463363458273519368
-    second: title Lights (PC)_9
+      213: -4207945142965053142
+    second: Hell(PC)_9
   - first:
-      213: 3270345987723161932
-    second: title Lights (PC)_10
+      213: 21238378535967555
+    second: Hell(PC)_10
   - first:
-      213: -2780160054565773929
-    second: title Lights (PC)_11
+      213: 4697743577007520196
+    second: Hell(PC)_11
   - first:
-      213: 3041310998785975358
-    second: title Lights (PC)_12
+      213: 189565448791663078
+    second: Hell(PC)_12
   - first:
-      213: -1018832846566934250
-    second: title Lights (PC)_13
+      213: -377474504670732255
+    second: Hell(PC)_13
   - first:
-      213: -3101914291181295580
-    second: title Lights (PC)_14
+      213: -5756549468121648694
+    second: Hell(PC)_14
   - first:
-      213: -851231980479693250
-    second: title Lights (PC)_15
+      213: -5787700513881044719
+    second: Hell(PC)_15
   - first:
-      213: 1717814092591798717
-    second: title Lights (PC)_16
+      213: -1019664592386374768
+    second: Hell(PC)_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: title Lights (PC)_0
+      name: Hell(PC)_0
       rect:
         serializedVersion: 2
-        x: 108
-        y: 117
-        width: 51
-        height: 35
+        x: 0
+        y: 211
+        width: 105
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 085e8a4bd27ffbf20800000000000000
-      internalID: 3440740416010904960
+      spriteID: f3fd0893621c8c400800000000000000
+      internalID: 344737741411508031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_1
+      name: Hell(PC)_1
       rect:
         serializedVersion: 2
-        x: 157
-        y: 124
-        width: 9
-        height: 12
+        x: 31
+        y: 158
+        width: 45
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,85 +185,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 462f0984fdd4f4900800000000000000
-      internalID: 670840490891997796
+      spriteID: f090861cee435d580800000000000000
+      internalID: -8803071696574084849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_2
+      name: Hell(PC)_2
       rect:
         serializedVersion: 2
-        x: 123
-        y: 110
-        width: 14
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72a9648f7c21fba20800000000000000
-      internalID: 3080201320217877031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_3
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 111
-        width: 17
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5eac7550e30a0f920800000000000000
-      internalID: 3022091538203658981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 17
-        width: 44
-        height: 79
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ac4b7a1294b976a40800000000000000
-      internalID: 5361424619807421642
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_5
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 59
-        width: 25
+        x: 91
+        y: 232
+        width: 43
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -273,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e5010c31789e3110800000000000000
-      internalID: 1242598159306261990
+      spriteID: f2bff48f2e035f440800000000000000
+      internalID: 4968931515259943727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_6
+      name: Hell(PC)_3
       rect:
         serializedVersion: 2
-        x: 102
-        y: 69
-        width: 12
-        height: 7
+        x: 119
+        y: 212
+        width: 105
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29cfa8bf28eea5900800000000000000
-      internalID: 674113340578659474
+      spriteID: a7d5d72c33bde6280800000000000000
+      internalID: -9048053585987936902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_7
+      name: Hell(PC)_4
       rect:
         serializedVersion: 2
-        x: 146
-        y: 19
-        width: 65
-        height: 62
+        x: 148
+        y: 158
+        width: 45
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3eae55c4a0b2a9710800000000000000
-      internalID: 1700719132516149987
+      spriteID: f2c528fa55851ac10800000000000000
+      internalID: 2063027229352418351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_8
+      name: Hell(PC)_5
       rect:
         serializedVersion: 2
-        x: 105
-        y: 55
-        width: 6
-        height: 7
+        x: 69
+        y: 183
+        width: 13
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,129 +273,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e1f28e757080ee60800000000000000
-      internalID: 7989526981077299686
+      spriteID: cf0c4bacff4ceb430800000000000000
+      internalID: 3800691738443825404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_9
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 48
-        width: 10
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 807267237b6501030800000000000000
-      internalID: 3463363458273519368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_10
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 26
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c41fcda495a926d20800000000000000
-      internalID: 3270345987723161932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_11
-      rect:
-        serializedVersion: 2
-        x: 104
-        y: 37
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79d50e80923ea69d0800000000000000
-      internalID: -2780160054565773929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_12
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 22
-        width: 7
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3460266d38e43a20800000000000000
-      internalID: 3041310998785975358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_13
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 16
-        width: 19
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 619b0ee8ce06cd1f0800000000000000
-      internalID: -1018832846566934250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: title Lights (PC)_14
+      name: Hell(PC)_6
       rect:
         serializedVersion: 2
         x: 97
-        y: 17
-        width: 12
+        y: 208
+        width: 30
         height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -471,20 +295,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4286e660369c3f4d0800000000000000
-      internalID: -3101914291181295580
+      spriteID: 21a47ba9778352e00800000000000000
+      internalID: 1019282977017252370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_15
+      name: Hell(PC)_7
       rect:
         serializedVersion: 2
-        x: 167
-        y: 14
-        width: 11
-        height: 12
+        x: 142
+        y: 183
+        width: 13
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,20 +317,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3e3e061601df24f0800000000000000
-      internalID: -851231980479693250
+      spriteID: d37536f4698e8ee40800000000000000
+      internalID: 5686050261829900093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: title Lights (PC)_16
+      name: Hell(PC)_8
       rect:
         serializedVersion: 2
-        x: 208
-        y: 22
-        width: 10
-        height: 10
+        x: 0
+        y: 104
+        width: 17
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,8 +339,184 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db9181bd0d6e6d710800000000000000
-      internalID: 1717814092591798717
+      spriteID: e2a71a4f87b950440800000000000000
+      internalID: 4901494713265257006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_9
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 183
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a29dc37ef206a95c0800000000000000
+      internalID: -4207945142965053142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_10
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 104
+        width: 17
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34bdd3851347b4000800000000000000
+      internalID: 21238378535967555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 103
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c9f761c4ecb13140800000000000000
+      internalID: 4697743577007520196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 131
+        width: 50
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e12ae475c871a200800000000000000
+      internalID: 189565448791663078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_13
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 103
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120a55d10f0f2caf0800000000000000
+      internalID: -377474504670732255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 104
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac135ac12c0ac10b0800000000000000
+      internalID: -5756549468121648694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 47
+        width: 96
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11946c31c05fdafa0800000000000000
+      internalID: -5787700513881044719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hell(PC)_16
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 104
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09344c4a47c69d1f0800000000000000
+      internalID: -1019664592386374768
       vertices: []
       indices: 
       edges: []
@@ -535,23 +535,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      title Lights (PC)_0: 3440740416010904960
-      title Lights (PC)_1: 670840490891997796
-      title Lights (PC)_10: 3270345987723161932
-      title Lights (PC)_11: -2780160054565773929
-      title Lights (PC)_12: 3041310998785975358
-      title Lights (PC)_13: -1018832846566934250
-      title Lights (PC)_14: -3101914291181295580
-      title Lights (PC)_15: -851231980479693250
-      title Lights (PC)_16: 1717814092591798717
-      title Lights (PC)_2: 3080201320217877031
-      title Lights (PC)_3: 3022091538203658981
-      title Lights (PC)_4: 5361424619807421642
-      title Lights (PC)_5: 1242598159306261990
-      title Lights (PC)_6: 674113340578659474
-      title Lights (PC)_7: 1700719132516149987
-      title Lights (PC)_8: 7989526981077299686
-      title Lights (PC)_9: 3463363458273519368
+      Hell(PC)_0: 344737741411508031
+      Hell(PC)_1: -8803071696574084849
+      Hell(PC)_10: 21238378535967555
+      Hell(PC)_11: 4697743577007520196
+      Hell(PC)_12: 189565448791663078
+      Hell(PC)_13: -377474504670732255
+      Hell(PC)_14: -5756549468121648694
+      Hell(PC)_15: -5787700513881044719
+      Hell(PC)_16: -1019664592386374768
+      Hell(PC)_2: 4968931515259943727
+      Hell(PC)_3: -9048053585987936902
+      Hell(PC)_4: 2063027229352418351
+      Hell(PC)_5: 3800691738443825404
+      Hell(PC)_6: 1019282977017252370
+      Hell(PC)_7: 5686050261829900093
+      Hell(PC)_8: 4901494713265257006
+      Hell(PC)_9: -4207945142965053142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

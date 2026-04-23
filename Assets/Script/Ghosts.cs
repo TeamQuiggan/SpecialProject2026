@@ -11,6 +11,8 @@ public class Ghosts : MonoBehaviour
     public Ghost_Scatter scatter { get; private set; }
     public Ghost_Behave inibehavior;
     public Transform target;
+    public AudioSource SnakeAttack;
+    public AudioSource SnakeMovement;
     private void Awake()
     {
 
@@ -25,12 +27,17 @@ public class Ghosts : MonoBehaviour
     void Start()
     {   
             ResetSttate();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.gameObject.tag == "Snake")
+        {
+            SnakeMovement.Play();
+            //Debug.Log("shhh");
+        }
     }
     public void ResetSttate()
     {
@@ -58,7 +65,11 @@ public class Ghosts : MonoBehaviour
                 FindAnyObjectByType<GameManager>().GhostEaten(this);
             }
             else
-            {
+            {   
+                if (this.gameObject.tag == "Snake")
+                {
+                    SnakeAttack.Play(0);
+                }
                 FindAnyObjectByType<GameManager>().PacmanEaten();
             }
         }
