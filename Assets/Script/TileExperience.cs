@@ -119,7 +119,7 @@ public class TileExperience : MonoBehaviour
 
                     Vector3 worldPos = targetTilemap3.GetCellCenterWorld(pos);
                     portalnode3.Add(worldPos);
-                    //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
+                    Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
                 }
             }
 
