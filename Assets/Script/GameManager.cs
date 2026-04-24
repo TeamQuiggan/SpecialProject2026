@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     public List<Tilemap> Pelletmap = new List<Tilemap>();
     public List<RuleTile> Collectibles = new List<RuleTile>(); 
     int index = 1;
+    public GameObject GameWon;
+    public Sprite WinPannel;
+    public TileExperience PortalAndBoulderControl;
     public List<Vector3Int> CollectiblePos = new List<Vector3Int>();
     void Start()
     {
@@ -60,6 +63,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(transition.Transitioning());
             Invoke(nameof(NewRound), 3f);
             Level2 = true;
+            StartCoroutine(PortalAndBoulderControl.DestroyPortal());
         }
         else if (Keyboard.current.spaceKey.wasPressedThisFrame && Level2)
         {   
@@ -70,6 +74,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(transition.Transitioning());
             Invoke(nameof(NewRound), 3f);
             Level3 = true;
+            StartCoroutine(PortalAndBoulderControl.DestroyPortal());
         }
         else if (Keyboard.current.spaceKey.wasPressedThisFrame && Level3)
         {
@@ -80,6 +85,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(transition.Transitioning());
             Invoke(nameof(NewRound), 3f);
             Level1 = true;
+            StartCoroutine(PortalAndBoulderControl.DestroyPortal());
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -140,6 +146,7 @@ public class GameManager : MonoBehaviour
         DarkenBackgr.SetActive(false);
         gameOverText.enabled = false;
         SettingPannel.SetActive(false);
+        GameWon.SetActive(false);
         HighScoreBoard.SetActive(false);
         if (Level1)
         {
@@ -266,6 +273,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(transition.Transitioning());
                 Invoke(nameof(NewRound), 3f);
                 Level2 = true;
+                StartCoroutine(PortalAndBoulderControl.DestroyPortal());
             }
             else if (Level2)
             {
@@ -276,6 +284,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(transition.Transitioning());
                 Invoke(nameof(NewRound), 3f);
                 Level3 = true;
+                StartCoroutine(PortalAndBoulderControl.DestroyPortal());
             }
             else if (Level3)
             {
