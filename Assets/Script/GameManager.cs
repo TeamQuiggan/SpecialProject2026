@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Collections;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +35,10 @@ public class GameManager : MonoBehaviour
     private List<float> Records = new List<float>(6);
     public Transform PelletLevel3;
     public GameObject SettingPannel;
+    public List<Tilemap> Pelletmap = new List<Tilemap>();
+    public List<RuleTile> Collectibles = new List<RuleTile>(); 
+    int index = 1;
+    public List<Vector3Int> CollectiblePos = new List<Vector3Int>();
     void Start()
     {
         Level1 = true;
@@ -83,16 +89,23 @@ public class GameManager : MonoBehaviour
             SettingPannel.SetActive(true);
             // Add your pause or menu close logic here
         }
-        //if (Level1)
-        //{
-        //    Level1 = false;
-        //    Level2 = true;
-        //}
-        //else if (Level2)
-        //{
-        //    Level2 = false;
-        //    Level1 = true;
-        //}
+
+        if (Level1)
+        {
+           if (index >=3)
+            {
+                index = 0;
+            }
+           
+
+        }
+        else if (Level2)
+        {
+            if ( index >= 5)
+            {
+                index = 3;
+            }
+        }
     }
     private void NewGame()
     {
@@ -344,6 +357,10 @@ public class GameManager : MonoBehaviour
         {
             obj.SetActive(true);
         }
+        if (!(index == 3))
+        {
+            index = 3;
+        }
         //Level2 = true;
     }
     private void Level2to3()
@@ -374,6 +391,10 @@ public class GameManager : MonoBehaviour
         {
             obj.SetActive(false);
         }
+        if (!(index == 0))
+        {
+            index = 0;
+        }
         //Level1 = true;
     }
     public void HighScore()
@@ -395,5 +416,33 @@ public class GameManager : MonoBehaviour
     public void closeOptions()
     {
        SettingPannel.SetActive(false);
+    }
+    public void SpawnCollectible()
+    {
+        StartCoroutine(SpawnNewTiles());
+    }
+    IEnumerator SpawnNewTiles()
+    {
+        yield return new WaitForSecondsRealtime(7f);
+        if (Level1)
+        {
+
+            Pelletmap[0].SetTile(CollectiblePos[0], Collectibles[index]);
+            Pelletmap[0].RefreshTile(CollectiblePos[0]);
+            index++;
+
+        }
+        else if (Level2)
+        {
+            Pelletmap[1].SetTile(CollectiblePos[1], Collectibles[index]);
+            Pelletmap[1].RefreshTile(CollectiblePos[1]);
+            index++;
+
+        }
+        else if (Level3)
+        {
+            Pelletmap[2].SetTile(CollectiblePos[2], Collectibles[5]);
+            Pelletmap[2].RefreshTile(CollectiblePos[2]);
+        }
     }
 }
