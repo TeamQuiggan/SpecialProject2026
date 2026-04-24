@@ -50,10 +50,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.lives <= 0 && Input.GetKeyDown(KeyCode.Return))
-        {
-            NewGame();
-        }
+
         if (Keyboard.current.spaceKey.wasPressedThisFrame && Level1)
         {
             Level1 = false;
@@ -109,7 +106,30 @@ public class GameManager : MonoBehaviour
         }
     }
     private void NewGame()
-    {
+    {   
+        if (!Level1)
+        {
+            if (Level2)
+            {
+                Level2 = false;
+                Level2to1();
+                this.PacMan.gameObject.SetActive(false);
+                this.movement.StartingPos = new Vector3(0.5f, -7.5f, -5f);
+                StartCoroutine(transition.Transitioning());
+                Invoke(nameof(NewRound), 3f);
+                Level1 = true;
+            }
+            else if (Level3)
+            {
+                Level3 = false;
+                Level3to1();
+                this.PacMan.gameObject.SetActive(false);
+                this.movement.StartingPos = new Vector3(0.5f, -7.5f, -5f);
+                StartCoroutine(transition.Transitioning());
+                Invoke(nameof(NewRound), 3f);
+                Level1 = true;
+            }
+        }
         SetScore(0);
         SetLives(3);
         NewRound();
@@ -360,14 +380,14 @@ public class GameManager : MonoBehaviour
         }
         if (!(index == 3))
         {
-            index = 3;
+            index = 4;
         }
         //Level2 = true;
     }
     private void Level2to3()
     {
         //Level2 = false;
-        Camera.main.orthographicSize = 18f;
+        Camera.main.orthographicSize = 15f;
         foreach (GameObject obj in Level3Stuff)
         {
             obj.SetActive(true);
@@ -382,13 +402,32 @@ public class GameManager : MonoBehaviour
     private void Level3to1()
     {
         //Level2 = false;
-        Camera.main.orthographicSize = 15f;
+        Camera.main.orthographicSize = 18f;
         foreach (GameObject obj in Level1Stuff)
         {
             obj.SetActive(true);
 
         }
         foreach (GameObject obj in Level3Stuff)
+        {
+            obj.SetActive(false);
+        }
+        if (!(index == 0))
+        {
+            index = 0;
+        }
+        //Level1 = true;
+    }
+    private void Level2to1()
+    {
+        //Level2 = false;
+        Camera.main.orthographicSize = 15f;
+        foreach (GameObject obj in Level1Stuff)
+        {
+            obj.SetActive(true);
+
+        }
+        foreach (GameObject obj in Level2Stuff)
         {
             obj.SetActive(false);
         }
@@ -445,6 +484,13 @@ public class GameManager : MonoBehaviour
         {
             Pelletmap[2].SetTile(CollectiblePos[2], Collectibles[5]);
             Pelletmap[2].RefreshTile(CollectiblePos[2]);
+        }
+    }
+    public void Retry()
+    {
+        if (this.lives <= 0)
+        {
+            NewGame();
         }
     }
 }
