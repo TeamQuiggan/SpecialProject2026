@@ -6,8 +6,18 @@ public class Pellet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Pacman"))
-        {
-            Eat();
+        {   
+            if (this.gameObject.tag == "Collectible")
+            {
+                FindAnyObjectByType<GameManager>().SpawnCollectible();
+                Destroy(this.gameObject);
+                Eat();
+            }
+            else
+            {
+                Eat();
+            }
+                
         }
     }
     protected virtual void Eat()
