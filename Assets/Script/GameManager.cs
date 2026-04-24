@@ -124,6 +124,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(transition.Transitioning());
                 Invoke(nameof(NewRound), 3f);
                 Level1 = true;
+                StartCoroutine(PortalAndBoulderControl.DestroyPortal());
             }
             else if (Level3)
             {
@@ -134,6 +135,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(transition.Transitioning());
                 Invoke(nameof(NewRound), 3f);
                 Level1 = true;
+                StartCoroutine(PortalAndBoulderControl.DestroyPortal());
             }
         }
         SetScore(0);
