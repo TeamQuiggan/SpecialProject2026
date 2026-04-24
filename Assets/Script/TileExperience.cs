@@ -23,111 +23,117 @@ public class TileExperience : MonoBehaviour
     public List<Vector3> portalnode2 = new List<Vector3>();
     public List<Vector3> portalnode3 = new List<Vector3>();
     BoundsInt bounds;
+    public AudioSource Rolling1;
+    public AudioSource Rolling2;
+    public Passage Portal3;
+    public Passage Portal4;
     void Start()
     {
-        if (Gamemanager.Level1)
-        {
-            bounds = targetTilemap.cellBounds;
-        }
-        else if (Gamemanager.Level2)
-        {
-            bounds = targetTilemap2.cellBounds;
-        }
-        else if (Gamemanager.Level3)
-        {
-            bounds = targetTilemap3.cellBounds;
-        }
+        //    if (Gamemanager.Level1)
+        //    {
+        //        bounds = targetTilemap.cellBounds;
+        //    }
+        //    else if (Gamemanager.Level2)
+        //    {
+        //        bounds = targetTilemap2.cellBounds;
+        //    }
+        //    else if (Gamemanager.Level3)
+        //    {
+        //        bounds = targetTilemap3.cellBounds;
+        //    }
+
+
+        //    foreach (var pos in bounds.allPositionsWithin)
+        //    {
+        //        if (Gamemanager.Level1)
+        //        {
+        //            if (targetTilemap.HasTile(pos))
+        //            {
+
+        //                Vector3 worldPos = targetTilemap.GetCellCenterWorld(pos);
+        //                portalnode.Add(worldPos);
+        //                //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
+        //            }
+        //        }
+        //        else if (Gamemanager.Level2)
+        //        {
+        //            if (targetTilemap2.HasTile(pos))
+        //            {
+
+        //                Vector3 worldPos = targetTilemap2.GetCellCenterWorld(pos);
+        //                portalnode2.Add(worldPos);
+        //                //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
+        //            }
+        //        }
+        //        else if (Gamemanager.Level3)
+        //        {
+        //            if (targetTilemap3.HasTile(pos))
+        //            {
+
+        //                Vector3 worldPos = targetTilemap3.GetCellCenterWorld(pos);
+        //                portalnode3.Add(worldPos);
+        //                //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
+        //            }
+        //        }
+
+        //    }
+        //}
         
-
-        foreach (var pos in bounds.allPositionsWithin)
-        {
-            if (Gamemanager.Level1)
-            {
-                if (targetTilemap.HasTile(pos))
-                {
-
-                    Vector3 worldPos = targetTilemap.GetCellCenterWorld(pos);
-                    portalnode.Add(worldPos);
-                    //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
-                }
-            }
-            else if (Gamemanager.Level2)
-            {
-                if (targetTilemap2.HasTile(pos))
-                {
-
-                    Vector3 worldPos = targetTilemap2.GetCellCenterWorld(pos);
-                    portalnode2.Add(worldPos);
-                    //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
-                }
-            }
-            else if (Gamemanager.Level3)
-            {
-                if (targetTilemap3.HasTile(pos))
-                {
-
-                    Vector3 worldPos = targetTilemap3.GetCellCenterWorld(pos);
-                    portalnode3.Add(worldPos);
-                    //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
-                }
-            }
-
-        }
     }
     void Update()
     {
-        if (Gamemanager.Level1)
-        {
-            bounds = targetTilemap.cellBounds;
-        }
-        else if (Gamemanager.Level2)
-        {
-            bounds = targetTilemap2.cellBounds;
-        }
-        else if (Gamemanager.Level3)
-        {
-            bounds = targetTilemap3.cellBounds;
-        }
+        //if (Gamemanager.Level1)
+        //{
+        //    bounds = targetTilemap.cellBounds;
+        //}
+        //else if (Gamemanager.Level2)
+        //{
+        //    bounds = targetTilemap2.cellBounds;
+        //}
+        //else if (Gamemanager.Level3)
+        //{
+        //    bounds = targetTilemap3.cellBounds;
+        //}
 
 
-        foreach (var pos in bounds.allPositionsWithin)
-        {
-            if (Gamemanager.Level1)
-            {
-                if (targetTilemap.HasTile(pos))
-                {
+        //foreach (var pos in bounds.allPositionsWithin)
+        //{
+        //    if (Gamemanager.Level1)
+        //    {
+        //        if (targetTilemap.HasTile(pos))
+        //        {
 
-                    Vector3 worldPos = targetTilemap.GetCellCenterWorld(pos);
-                    portalnode.Add(worldPos);
-                    //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
-                }
-            }
-            else if (Gamemanager.Level2)
-            {
-                if (targetTilemap2.HasTile(pos))
-                {
+        //            Vector3 worldPos = targetTilemap.GetCellCenterWorld(pos);
+        //            portalnode.Add(worldPos);
+        //            //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
+        //        }
+        //    }
+        //    else if (Gamemanager.Level2)
+        //    {
+        //        if (targetTilemap2.HasTile(pos))
+        //        {
 
-                    Vector3 worldPos = targetTilemap2.GetCellCenterWorld(pos);
-                    portalnode2.Add(worldPos);
-                    //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
-                }
-            }
-            else if (Gamemanager.Level3)
-            {
-                if (targetTilemap3.HasTile(pos))
-                {
+        //            Vector3 worldPos = targetTilemap2.GetCellCenterWorld(pos);
+        //            portalnode2.Add(worldPos);
+        //            //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
+        //        }
+        //    }
+        //    else if (Gamemanager.Level3)
+        //    {
+        //        if (targetTilemap3.HasTile(pos))
+        //        {
 
-                    Vector3 worldPos = targetTilemap3.GetCellCenterWorld(pos);
-                    portalnode3.Add(worldPos);
-                    Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
-                }
-            }
+        //            Vector3 worldPos = targetTilemap3.GetCellCenterWorld(pos);
+        //            portalnode3.Add(worldPos);
+        //            //Debug.Log($"Tile at {pos} is at World Position: {worldPos}");
+        //        }
+        //    }
 
-        }
+        //}
         if (SpawnPortal)
         {
             SpawnPortal = false;
-            StartCoroutine(spawnPortal());
+            spawnPortal();
         }
         if (SpawnBoulder)
         {
@@ -135,48 +141,47 @@ public class TileExperience : MonoBehaviour
             StartCoroutine(Spawnboulder());
         }
     }
-    IEnumerator spawnPortal()
-    {   
+    void spawnPortal()
+    {
         if (Gamemanager.Level1)
         {
-            Random1 = Random.Range(0, portalnode.Count);
-            Random2 = Random.Range(0, portalnode.Count);
-            if (Random1 == Random2)
-            {
-                Random2 = Random.Range(0, portalnode.Count);
-            }
-            else
-            {
-                if (!Portal1)
+            Random1 = Random.Range(0, 1);
+            Random2 = 1 - Random1;
+
+            if (!Portal1)
                 {
                     Portal1 = Instantiate(portal, portalnode[Random1], Quaternion.identity);
-                    Portal2 = Instantiate(portal, portalnode[Random2], Quaternion.identity);
+                    Portal2 = Instantiate(portal, portalnode[Random1+2], Quaternion.identity);
                     Portal1.Connection = Portal2.transform;
                     Portal2.Connection = Portal1.transform;
-                    //Portal1.Teleportable = Portal2.Teleportable;
-                    //if (!Portal1.Teleportable)
-                    //{
-                    //    Portal2.enabled = false;
-                    //    //yield return new WaitForSecondsRealtime(0.5f);
+                    Portal3 = Instantiate(portal, portalnode[Random2], Quaternion.identity);
+                    Portal4 = Instantiate(portal, portalnode[Random2 + 2], Quaternion.identity);
+                    Portal3.Connection = Portal4.transform;
+                    Portal4.Connection = Portal3.transform;
+                //Portal1.Teleportable = Portal2.Teleportable;
+                //if (!Portal1.Teleportable)
+                //{
+                //    Portal2.enabled = false;
+                //    //yield return new WaitForSecondsRealtime(0.5f);
 
-                    //}
-                    //else
-                    //{
-                    //    Portal2.enabled = true;
-                    //}
-                    //if (!Portal2.Teleportable)
-                    //{
-                    //    Portal1.enabled = false;
-                    //    //yield return new WaitForSecondsRealtime(0.5f);
+                //}
+                //else
+                //{
+                //    Portal2.enabled = true;
+                //}
+                //if (!Portal2.Teleportable)
+                //{
+                //    Portal1.enabled = false;
+                //    //yield return new WaitForSecondsRealtime(0.5f);
 
-                    //}
-                    //else
-                    //{
-                    //    Portal1.enabled = true;
-                    //}
-                    yield return new WaitForSecondsRealtime(7f);
-                    SpawnPortal = true;
-                }
+                //}
+                //else
+                //{
+                //    Portal1.enabled = true;
+                //}
+                //yield return new WaitForSecondsRealtime(7f);
+                //    SpawnPortal = true;
+            }
 
 
 
@@ -186,48 +191,47 @@ public class TileExperience : MonoBehaviour
                 //Destroy(Portal2);
                 //yield return new WaitForSecondsRealtime(2f);
 
-            }
+            
         }
         //yield return new WaitForSecondsRealtime(sec);
         else if (Gamemanager.Level2)
         {
-            Random1 = Random.Range(0, portalnode2.Count);
-            Random2 = Random.Range(0, portalnode2.Count);
-            if (Random1 == Random2)
-            {
-                Random2 = Random.Range(0, portalnode2.Count);
-            }
-            else
-            {
-                if (!Portal1)
+            Random1 = Random.Range(0, 1);
+            Random2 = 1 - Random1;
+
+            if (!Portal1)
                 {
                     Portal1 = Instantiate(portal, portalnode2[Random1], Quaternion.identity);
-                    Portal2 = Instantiate(portal, portalnode2[Random2], Quaternion.identity);
+                    Portal2 = Instantiate(portal, portalnode2[Random1+2], Quaternion.identity);
                     Portal1.Connection = Portal2.transform;
                     Portal2.Connection = Portal1.transform;
-                    //Portal1.Teleportable = Portal2.Teleportable;
-                    //if (!Portal1.Teleportable)
-                    //{
-                    //    Portal2.enabled = false;
-                    //    //yield return new WaitForSecondsRealtime(0.5f);
+                    Portal3 = Instantiate(portal, portalnode2[Random2], Quaternion.identity);
+                    Portal4 = Instantiate(portal, portalnode2[Random2 + 2], Quaternion.identity);
+                    Portal3.Connection = Portal4.transform;
+                    Portal4.Connection = Portal3.transform;
+                //Portal1.Teleportable = Portal2.Teleportable;
+                //if (!Portal1.Teleportable)
+                //{
+                //    Portal2.enabled = false;
+                //    //yield return new WaitForSecondsRealtime(0.5f);
 
-                    //}
-                    //else
-                    //{
-                    //    Portal2.enabled = true;
-                    //}
-                    //if (!Portal2.Teleportable)
-                    //{
-                    //    Portal1.enabled = false;
-                    //    //yield return new WaitForSecondsRealtime(0.5f);
+                //}
+                //else
+                //{
+                //    Portal2.enabled = true;
+                //}
+                //if (!Portal2.Teleportable)
+                //{
+                //    Portal1.enabled = false;
+                //    //yield return new WaitForSecondsRealtime(0.5f);
 
-                    //}
-                    //else
-                    //{
-                    //    Portal1.enabled = true;
-                    //}
-                    yield return new WaitForSecondsRealtime(7f);
-                    SpawnPortal = true;
+                //}
+                //else
+                //{
+                //    Portal1.enabled = true;
+                //}
+                //yield return new WaitForSecondsRealtime(7f);
+                //    SpawnPortal = true;
                 }
 
 
@@ -238,71 +242,82 @@ public class TileExperience : MonoBehaviour
                 //Destroy(Portal2);
                 //yield return new WaitForSecondsRealtime(2f);
 
-            }
+            //}
         }
-        else if (Gamemanager.Level3)
-        {
-            Random1 = Random.Range(0, portalnode3.Count);
-            Random2 = Random.Range(0, portalnode3.Count);
-            if (Random1 == Random2)
-            {
-                Random2 = Random.Range(0, portalnode3.Count);
-            }
-            else
-            {
-                if (!Portal1)
-                {
-                    Portal1 = Instantiate(portal, portalnode3[Random1], Quaternion.identity);
-                    Portal2 = Instantiate(portal, portalnode3[Random2], Quaternion.identity);
-                    Portal1.Connection = Portal2.transform;
-                    Portal2.Connection = Portal1.transform;
-                    //Portal1.Teleportable = Portal2.Teleportable;
-                    //if (!Portal1.Teleportable)
-                    //{
-                    //    Portal2.enabled = false;
-                    //    //yield return new WaitForSecondsRealtime(0.5f);
+        //else if (Gamemanager.Level3)
+        //{
+        //    Random1 = Random.Range(0, portalnode3.Count);
+        //    Random2 = Random.Range(0, portalnode3.Count);
+        //    if (Random1 == Random2)
+        //    {
+        //        Random2 = Random.Range(0, portalnode3.Count);
+        //    }
+        //    else
+        //    {
+        //        if (!Portal1)
+        //        {
+        //            Portal1 = Instantiate(portal, portalnode3[Random1], Quaternion.identity);
+        //            Portal2 = Instantiate(portal, portalnode3[Random2], Quaternion.identity);
+        //            Portal1.Connection = Portal2.transform;
+        //            Portal2.Connection = Portal1.transform;
+        //            //Portal1.Teleportable = Portal2.Teleportable;
+        //            //if (!Portal1.Teleportable)
+        //            //{
+        //            //    Portal2.enabled = false;
+        //            //    //yield return new WaitForSecondsRealtime(0.5f);
 
-                    //}
-                    //else
-                    //{
-                    //    Portal2.enabled = true;
-                    //}
-                    //if (!Portal2.Teleportable)
-                    //{
-                    //    Portal1.enabled = false;
-                    //    //yield return new WaitForSecondsRealtime(0.5f);
+        //            //}
+        //            //else
+        //            //{
+        //            //    Portal2.enabled = true;
+        //            //}
+        //            //if (!Portal2.Teleportable)
+        //            //{
+        //            //    Portal1.enabled = false;
+        //            //    //yield return new WaitForSecondsRealtime(0.5f);
 
-                    //}
-                    //else
-                    //{
-                    //    Portal1.enabled = true;
-                    //}
-                    yield return new WaitForSecondsRealtime(7f);
-                    SpawnPortal = true;
-                }
+        //            //}
+        //            //else
+        //            //{
+        //            //    Portal1.enabled = true;
+        //            //}
+        //            yield return new WaitForSecondsRealtime(7f);
+        //            SpawnPortal = true;
+        //        }
 
 
 
-                //SpawnPortal = true;
-                //StartCoroutine(DestroyPortal());
-                //Destroy(Portal1);
-                //Destroy(Portal2);
-                //yield return new WaitForSecondsRealtime(2f);
+        //SpawnPortal = true;
+        //StartCoroutine(DestroyPortal());
+        //Destroy(Portal1);
+        //Destroy(Portal2);
+        //yield return new WaitForSecondsRealtime(2f);
 
-            }
-        }
-    
-        
+        //  }
+        //}
+
+
     }
-    IEnumerator DestroyPortal()
-    {
+    public IEnumerator DestroyPortal()
+    {   
+        if (!Gamemanager.Level1)
+        {
+            Destroy(Portal1.gameObject);
+            Destroy(Portal2.gameObject);
+            Destroy(Portal3.gameObject);
+            Destroy(Portal4.gameObject);
+        }
+
         yield return new WaitForSecondsRealtime(2f);
-        Destroy(Portal1);
-        Destroy(Portal2);
-        SpawnPortal = true;
+        if (!Gamemanager.Level3)
+        {   
+
+            SpawnPortal = true;
+        }
+
     }
     IEnumerator Spawnboulder()
-    {   
+    {
         if (Gamemanager.Level1)
         {
             Random1 = Random.Range(0, BoulderNode.Count);
@@ -318,9 +333,29 @@ public class TileExperience : MonoBehaviour
             Random1 = Random.Range(0, BoulderNode3.Count);
             Instantiate(boulder, BoulderNode3[Random1], Quaternion.identity);
         }
-
+        StartCoroutine(PlayRolling());
         yield return new WaitForSecondsRealtime(7f);
         SpawnBoulder = true;
+
+    }
+    IEnumerator PlayRolling()
+    {
+        yield return new WaitForSecondsRealtime(1.25f);
+        if (Gamemanager.Level1)
+        {
+            if (Rolling1.gameObject.activeSelf)
+            {
+                Rolling1.Play();
+            }
+
+        }
+        else if (Gamemanager.Level2 || Gamemanager.Level3)
+        {
+            if (Rolling2.gameObject.activeSelf)
+            {
+                Rolling2.Play();
+            }
+        }
 
     }
 }

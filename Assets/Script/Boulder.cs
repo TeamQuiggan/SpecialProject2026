@@ -52,6 +52,7 @@ public class Boulder : MonoBehaviour
     {
         StartCoroutine(spareCheck());
 
+
     }
     //void OnCollisionEnter2D(Collision2D col)
     //{
