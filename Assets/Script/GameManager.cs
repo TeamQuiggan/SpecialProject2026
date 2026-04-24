@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SettingPannel.SetActive(true);
+            Time.timeScale = 0f;
             // Add your pause or menu close logic here
         }
 
@@ -416,6 +417,7 @@ public class GameManager : MonoBehaviour
     public void closeOptions()
     {
        SettingPannel.SetActive(false);
+        Time.timeScale = 1;
     }
     public void SpawnCollectible()
     {
