@@ -300,7 +300,7 @@ public class TileExperience : MonoBehaviour
     }
     public IEnumerator DestroyPortal()
     {   
-        if (!Gamemanager.Level1)
+        if (Portal1.gameObject.activeSelf)
         {
             Destroy(Portal1.gameObject);
             Destroy(Portal2.gameObject);
